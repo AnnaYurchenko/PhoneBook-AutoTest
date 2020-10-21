@@ -13,6 +13,7 @@ public class LoginPage {
     private By password = By.name("password");
     private By loginButton = By.xpath("//button[contains(text(),'Login')]");
     private By errorMessage = By.xpath("//*[@id=\"error-message\"]");
+    private By emailError = By.xpath("//*[@id=\"email-error-required\"]");
 
     public LoginPage() {
     }
@@ -48,6 +49,10 @@ public class LoginPage {
     public void clickEmptyFields() {
         $(username).click();
         $(password).click();
+    }
+
+    public void emailError(String msg) {
+        $(emailError).shouldHave(text(msg));
     }
 
 }

@@ -49,13 +49,13 @@ public class LoginPageSteps implements En {
             loginPage.loginButtonDisabled();
         });
 
-        When("I click on the empty fields", () -> {
+        When("I click on empty fields", () -> {
             loginPage.clickEmptyFields();
         });
 
-        Then("I see empty fields error message", (DocString errorMessage) -> {
-            String message = errorMessage.getContent();
-            loginPage.assertMessage(message);
+        Then("I see email error message", (DocString emailError) -> {
+            String message = emailError.getContent();
+            loginPage.emailError(message);
         });
     }
 

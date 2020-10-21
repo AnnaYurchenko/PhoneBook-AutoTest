@@ -9,12 +9,13 @@ Feature: User Registration
   """
     Please, check your email and activate your account.
   """
-
+  @positive_registration
   Scenario: SignUp Button is enabled with the entered valid data
     Given I am on the Registration page
     When I create a user with the valid data
     And I see SignUp button is enabled
 
+  @positive_registration
   Scenario: SignUp Button is disabled with no entered data
     Given I am on the Registration page
     When Registration fields are not filled out
@@ -28,7 +29,7 @@ Feature: User Registration
     """
     Password must be no longer than 20 characters.
     """
-
+  @negative_registration
   Scenario: SignUp Button is disabled with the entered non-valid data
     Given I am on the Registration page
     When I create a user with the wrong password
