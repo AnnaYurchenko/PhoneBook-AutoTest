@@ -1,6 +1,5 @@
 package tests.basicGUITests.steps;
 
-
 import com.github.javafaker.Faker;
 import io.cucumber.java8.En;
 import tests.basicGUITests.pages.ForgotPasswordPage;
@@ -20,7 +19,7 @@ public class ForgotPasswordSteps implements En {
         Faker faker = new Faker();
 
         Given("I am on the 'Forgot Password' page", () -> {
-           open(forgotPassUrl);
+            open(forgotPassUrl);
         });
 
         When("I click on the Login link", () -> {

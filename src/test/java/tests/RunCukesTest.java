@@ -7,7 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         publish = true,
-        plugin = {"json:target/cucumber-report.json", "pretty"}
+        plugin = {"json:target/cucumber-report.json", "pretty"},
+//        tags = "@positive_registration"
+//        tags = "@negative_registration"
+        tags = "@login"
+
 )
 public class RunCukesTest {
 }
